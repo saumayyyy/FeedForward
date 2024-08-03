@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000/api/v1";
+const BASE_URL = "https://feedforward-backend.onrender.com/api/v1";
 
 //AUTH endpoints
 export const endpoints = {
