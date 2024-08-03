@@ -1,6 +1,6 @@
 const {User,Profile} = require("../database/db");
 const z = require("zod");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
