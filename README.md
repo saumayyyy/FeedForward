@@ -101,31 +101,6 @@ The Food Donation Event Platform is a web application designed to facilitate the
     http://localhost:3000
     ```
 
-## Testing
-
-### Usability Testing
-- Define objectives and recruit participants.
-- Create test scenarios and conduct testing sessions.
-- Collect feedback and analyze results.
-- Implement changes based on findings.
-
-### Functionality Testing
-- Identify functions and create test cases.
-- Execute tests and record results.
-- Fix bugs and perform regression testing.
-
-### Performance Testing
-- Define performance criteria and select tools.
-- Create test scenarios and execute tests.
-- Analyze results and optimize as needed.
-
-## Optimization Strategies
-
-- **Frontend Optimization:** Minify assets, implement lazy loading, use code splitting, and leverage browser caching.
-- **Backend Optimization:** Database indexing, efficient queries, load balancing, and server-side caching.
-- **Network Optimization:** Use a CDN and enable compression.
-- **Monitoring and Maintenance:** Continuously monitor performance, keep dependencies updated, and collect user feedback.
-
 ## Future Enhancements
 
 - Develop a mobile application.
