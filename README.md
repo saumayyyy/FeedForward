@@ -11,6 +11,9 @@ Live Link:-https://feed-forward-red.vercel.app/
 ### About Us
 ![About Us](frontend/public/AboutUs.png)
 
+
+### Events
+![Events](frontend/public/EventPage.png)
 ## Overview
 
 The Food Donation Event Platform is a web application designed to facilitate the creation and management of food donation events. It connects donors with volunteers to contribute to the UN's 2nd Sustainable Development Goal (SDG) of Zero Hunger. The platform is built using the MERN stack, Tailwind CSS, React-Redux for state management, and Cloudinary for image uploads.
