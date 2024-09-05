@@ -6,13 +6,13 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 const EventsShow = ({events,navigate,donor})=>{
 
     return (
-        <div className="p-8">
-          <div className="text-4xl font-bold text-white mb-6">Enrolled Events</div>
-          {!events ? (
+        <div className="p-8 mx-auto min-w-[80%]">
+          <div className="text-4xl font-bold text-white mb-6">Events</div>
+          {!events ? 
             <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
               <div className="spinner"></div>
             </div>
-          ) : !events.length ? (
+           : !events.length ? (
             <p className="grid h-[10vh] w-full place-content-center text-white-500">
               You have not enrolled in any event yet.
             </p>
@@ -31,7 +31,7 @@ const EventsShow = ({events,navigate,donor})=>{
                 <div
                   className={`grid ${donor?"grid-cols-6":"grid-cols-5"} items-center rounded-md p-4 hover:bg-gray-100 transition bg-richblack-700 mb-4
                   ${event.status === 'completed' ? 'shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]' 
-                    : 'shadow-[5px_5px_rgba(255,_255,_0,_0.4),_10px_10px_rgba(255,_255,_0,_0.3),_15px_15px_rgba(255,_255,_0,_0.2),_20px_20px_rgba(255,_255,_0,_0.1),_25px_25px_rgba(255,_255,_0,_0.05)]'}`}
+                    : 'shadow-[5px_5px_rgba(255,_255,_150,_0.4),_10px_10px_rgba(255,_255,_150,_0.3),_15px_15px_rgba(255,_255,_150,_0.2),_20px_20px_rgba(255,_255,_150,_0.1),_25px_25px_rgba(255,_255,_150,_0.05)]'}`}
                   key={i}
                 >
                   <div
@@ -60,8 +60,8 @@ const EventsShow = ({events,navigate,donor})=>{
                     <span
                       className={`px-3 py-4 text-[15px] rounded-full ${
                         event.status === 'completed'
-                          ? 'bg-caribbeangreen-200 text-white font-semibold'
-                          : 'bg-yellow-200 text-yellow-800'
+                          ? 'bg-caribbeangreen-400 text-white font-semibold'
+                          : 'bg-yellow-400 text-white font-semibold px-5'
                       }`}
                     >
                       {event.status === 'completed' ? 'Completed' : 'Available'}
