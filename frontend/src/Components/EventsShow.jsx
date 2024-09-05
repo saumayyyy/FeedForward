@@ -8,11 +8,11 @@ const EventsShow = ({events,navigate,donor})=>{
     return (
         <div className="p-8 mx-auto min-w-[80%]">
           <div className="text-4xl font-bold text-white mb-6">Events</div>
-          {!events ? (
+          {!events ? 
             <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
               <div className="spinner"></div>
             </div>
-          ) : !events.length ? (
+           : !events.length ? (
             <p className="grid h-[10vh] w-full place-content-center text-white-500">
               You have not enrolled in any event yet.
             </p>
