@@ -19,7 +19,7 @@ const EventsShow = ({events,navigate,donor})=>{
           ) : (
             <div className="overflow-x-auto">
               {/* Headings */}
-              <div className={`grid ${donor?"grid-cols-6":"grid-cols-5"} bg-gray-800 text-white rounded-t-lg p-4 border-b-2 border-white bg-richblack-700`}>
+              <div className={`grid ${donor?"grid-cols-6":"grid-cols-5"} bg-gray-800 text-white rounded-t-lg p-4 border-b-2 border-white bg-richblack-700 mb-6`}>
                 <p className="col-span-2 font-semibold">Event Details</p>
                 <p className="col-span-1 text-center font-semibold">Event Date</p>
                 <p className="col-span-1 text-center font-semibold">Status</p>
@@ -29,7 +29,9 @@ const EventsShow = ({events,navigate,donor})=>{
               {/* Event Rows */}
               {events.map((event, i) => (
                 <div
-                  className={`grid ${donor?"grid-cols-6":"grid-cols-5"} items-center border-b border-white p-4 hover:bg-gray-100 transition bg-richblack-700`}
+                  className={`grid ${donor?"grid-cols-6":"grid-cols-5"} items-center rounded-md p-4 hover:bg-gray-100 transition bg-richblack-700 mb-4
+                  ${event.status === 'completed' ? 'shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]' 
+                    : 'shadow-[5px_5px_rgba(255,_255,_0,_0.4),_10px_10px_rgba(255,_255,_0,_0.3),_15px_15px_rgba(255,_255,_0,_0.2),_20px_20px_rgba(255,_255,_0,_0.1),_25px_25px_rgba(255,_255,_0,_0.05)]'}`}
                   key={i}
                 >
                   <div
@@ -58,7 +60,7 @@ const EventsShow = ({events,navigate,donor})=>{
                     <span
                       className={`px-3 py-4 text-[15px] rounded-full ${
                         event.status === 'completed'
-                          ? 'bg-caribbeangreen-200 text-caribbeangreen-800'
+                          ? 'bg-caribbeangreen-200 text-white font-semibold'
                           : 'bg-yellow-200 text-yellow-800'
                       }`}
                     >
