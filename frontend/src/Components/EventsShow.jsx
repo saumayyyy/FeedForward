@@ -6,7 +6,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 const EventsShow = ({events,navigate,donor})=>{
 
     return (
-        <div className="p-8 mx-auto min-w-[90%]">
+        <div className="p-8 mx-auto min-w-[80%]">
           <div className="text-4xl font-bold text-white mb-6">Events</div>
           {!events ? 
             <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
