@@ -15,13 +15,13 @@ export function getUserDetails(token,navigate){
             const response = await apiConnector("GET",GET_USER_DETAILS_API,{
                 Authorization: `Bearer ${token}`,
             })
-            console.log("GET_USER_DETAILS_API RESPONSE.....",response);
 
             if(!response.data.success){
                 throw new Error(response.data.message)
             }
             const userImage = response.data.user.image?response.data.user.image:
             `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.name}`
+            console.log(user);
             dispatch(setUser({...response.data.user,image:userImage}));
         } catch (e) {
             dispatch(logout(navigate))

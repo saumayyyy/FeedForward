@@ -5,6 +5,7 @@ import { formatDate } from "../operations/formatDate";
 import HighlightText from "../Components/Homepage/HighlightText"
 import { registerVolunteer, unregisterVolunteer, updateVolunteerStatus } from "../operations/volunteerApi";
 import { useDispatch } from 'react-redux';
+import { getUserDetails } from '../operations/profileAPI';
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -47,6 +48,8 @@ const EventDetails = () => {
     if (success) {
       const { event } = await getEventById(id, token);
       setEvent(event);
+      const { user } =await getUserDetails(token,navigate);
+      console.log(user);
     }
   };
 
